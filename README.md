@@ -87,26 +87,29 @@ A ferramenta gera um dashboard HTML interativo que facilita a visualização e a
 
 ## 🚀 Como Usar
 
-### 1. Configuração Básica
-
 1. Baixe o script:
 
 [![Download Script SecurityAuditDashboard.ps1](https://img.shields.io/badge/Download%20Script%20SecurityAuditDashboard-blue?style=flat-square&logo=powershell)](https://github.com/mathewsbuzetti/powershell-security-audit-dashboard/blob/main/Script/SecurityAuditDashboard.ps1)
-   
-2. Execute o script com parâmetros básicos:
+
+2. Abra o script no PowerShell ISE
+
+3. Localize as linhas abaixo no início do script e altere para o IP do seu servidor e o compartilhamento de rede que deseja analisar:
 
 ```powershell
-.\SecurityAuditDashboard.ps1 -ServerIP "10.0.0.15" -NetworkShares "\\10.0.0.15\compartilhamento" -OutputPath "C:\Relatorios\Seguranca"
+# Configurações que você deve alterar:
+[string]$ServerIP = "10.0.0.15"  # Altere para o IP do seu servidor
+[array]$NetworkShares = @("\\$ServerIP\compartilhamento")  # Altere para seu compartilhamento
+[string]$OutputPath = "C:\temp\SecurityAudit"  # Altere para pasta onde salvará relatórios
 ```
 
-### 2. Exemplo de Configuração Avançada
+4. Execute o script pressionando F5 ou o botão de Play no PowerShell ISE
 
-Para uma análise mais detalhada, você pode utilizar parâmetros adicionais:
+5. Alternativamente, você pode executar o script a partir do PowerShell com parâmetros:
 
 ```powershell
 .\SecurityAuditDashboard.ps1 -ServerIP "10.0.0.15" `
                              -NetworkShares @("\\10.0.0.15\compartilhamento\RH", "\\10.0.0.15\compartilhamento\Financeiro") `
-                             -OutputPath "C:\Relatorios\Seguranca" `
+                             -OutputPath "C:\temp\SecurityAudit" `
                              -MaxDepth 5 `
                              -BatchSize 2000 `
                              -MaxConcurrentJobs 4 `
@@ -114,7 +117,13 @@ Para uma análise mais detalhada, você pode utilizar parâmetros adicionais:
                              -GenerateHTML
 ```
 
-### 3. Resultados
+> [!WARNING]\
+> **Parâmetros avançados e seus impactos:**
+> - **MaxDepth**: Define a profundidade máxima de pastas que serão analisadas. Valores mais altos (como 5) analisam mais subpastas, mas aumentam significativamente o tempo de execução.
+> - **BatchSize**: Define quantas pastas são processadas em cada lote. Valores maiores (2000) usam mais memória, mas podem ser mais rápidos em sistemas com muita RAM. Reduza para 500-1000 em sistemas com memória limitada.
+> - **MaxConcurrentJobs**: Define quantos processamentos paralelos serão executados simultaneamente. Aumentar (4+) pode melhorar a velocidade em CPUs multi-core, mas pode sobrecarregar servidores em produção durante horário comercial.
+
+### Resultados
 - O script mostrará o progresso em tempo real no console, com informações detalhadas sobre o processo
 - Ao concluir, um dashboard HTML interativo será gerado na pasta de saída configurada
 - O dashboard será aberto automaticamente no navegador padrão
