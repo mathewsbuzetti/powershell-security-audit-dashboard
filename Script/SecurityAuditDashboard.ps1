@@ -1,6 +1,6 @@
 # Script para Análise de Permissões e Geração de Dashboard
 # Autor: Mathews Buzetti
-# GitHub: https://github.com/mathewsbuzetti/powershell-folder-comparison-tool/blob/main/README.md
+# GitHub: https://github.com/mathewsbuzetti/powershell-security-audit-dashboard/blob/main/README.md
 # Versão 1.1 - Com Dashboard HTML Moderno
 
 param (
