@@ -636,7 +636,7 @@
             font-size: 11px;
             color: var(--text-secondary);
             margin-top: 2px;
-            margin-left: 135px;
+            margin-left: 180px; /* Alinhado com o início do chart-label */
             font-style: italic;
         }
         
@@ -1165,7 +1165,7 @@
                             <div class="problema-chart-label" title="Permissão de usuário direto">Permissão de usuário direto:</div>
                             <div class="chart-bar">
                                 <div class="chart-bar-fill" style="width: 50%; background-color: var(--user-permission);">
-                                    <span class="chart-bar-value">94</span>
+                                    <span class="chart-bar-value">10</span>
                                 </div>
                             </div>
                         </div>
@@ -1174,8 +1174,8 @@
                         <div class="chart-bar-container">
                             <div class="problema-chart-label" title="Grupos com permissões de risco">Grupos com permissões de risco:</div>
                             <div class="chart-bar">
-                                <div class="chart-bar-fill" style="width: 34%; background-color: var(--excessive-permission);">
-                                    <span class="chart-bar-value">63</span>
+                                <div class="chart-bar-fill" style="width: 35%; background-color: var(--excessive-permission);">
+                                    <span class="chart-bar-value">7</span>
                                 </div>
                             </div>
                         </div>
@@ -1184,8 +1184,8 @@
                         <div class="chart-bar-container">
                             <div class="problema-chart-label" title="Quebra de herança desnecessária">Quebra de herança desnecessária:</div>
                             <div class="chart-bar">
-                                <div class="chart-bar-fill" style="width: 16%; background-color: var(--inheritance-break);">
-                                    <span class="chart-bar-value">30</span>
+                                <div class="chart-bar-fill" style="width: 15%; background-color: var(--inheritance-break);">
+                                    <span class="chart-bar-value">3</span>
                                 </div>
                             </div>
                         </div>
@@ -1194,15 +1194,15 @@
                 <div class="chart-legend">
                     <div class="legend-item">
                         <div class="legend-color" style="background-color: var(--user-permission);"></div>
-                        <span>Permissão de usuário direto: 94</span>
+                        <span>Permissão de usuário direto: 10</span>
                     </div>
                     <div class="legend-item">
                         <div class="legend-color" style="background-color: var(--excessive-permission);"></div>
-                        <span>Grupos com permissões de risco: 63</span>
+                        <span>Grupos com permissões de risco: 7</span>
                     </div>
                     <div class="legend-item">
                         <div class="legend-color" style="background-color: var(--inheritance-break);"></div>
-                        <span>Quebra de herança desnecessária: 30</span>
+                        <span>Quebra de herança desnecessária: 3</span>
                     </div>
                 </div>
             </div>
@@ -1358,7 +1358,7 @@
                                     <div class="chart-label">Alto Impacto:</div>
                                     <div class="chart-bar">
                                         <div class="chart-bar-fill" style="width: 50%; background-color: var(--high);">
-                                            <span class="chart-bar-value">94 <small>(50%)</small></span>
+                                            <span class="chart-bar-value">10 <small>(50%)</small></span>
                                         </div>
                                     </div>
                                 </div>
@@ -1370,8 +1370,8 @@
                                 <div class="chart-bar-container">
                                     <div class="chart-label">Médio Impacto:</div>
                                     <div class="chart-bar">
-                                        <div class="chart-bar-fill" style="width: 34%; background-color: var(--medium);">
-                                            <span class="chart-bar-value">63 <small>(34%)</small></span>
+                                        <div class="chart-bar-fill" style="width: 35%; background-color: var(--medium);">
+                                            <span class="chart-bar-value">7 <small>(35%)</small></span>
                                         </div>
                                     </div>
                                 </div>
@@ -1383,8 +1383,8 @@
                                 <div class="chart-bar-container">
                                     <div class="chart-label">Baixo Impacto:</div>
                                     <div class="chart-bar">
-                                        <div class="chart-bar-fill" style="width: 16%; background-color: var(--low);">
-                                            <span class="chart-bar-value">30 <small>(16%)</small></span>
+                                        <div class="chart-bar-fill" style="width: 15%; background-color: var(--low);">
+                                            <span class="chart-bar-value">3 <small>(15%)</small></span>
                                         </div>
                                     </div>
                                 </div>
@@ -1399,15 +1399,15 @@
             <div class="chart-legend">
                 <div class="legend-item">
                     <div class="legend-color" style="background-color: var(--high);"></div>
-                    <span>Alto Impacto: 94 (50%)</span>
+                    <span>Alto Impacto: 10 (50%)</span>
                 </div>
                 <div class="legend-item">
                     <div class="legend-color" style="background-color: var(--medium);"></div>
-                    <span>Médio Impacto: 63 (34%)</span>
+                    <span>Médio Impacto: 7 (35%)</span>
                 </div>
                 <div class="legend-item">
                     <div class="legend-color" style="background-color: var(--low);"></div>
-                    <span>Baixo Impacto: 30 (16%)</span>
+                    <span>Baixo Impacto: 3 (15%)</span>
                 </div>
             </div>
         </div>
@@ -1430,7 +1430,7 @@
                             </div>
                             <div>
                                 <h5 style="font-size: 16px; margin-bottom: 5px; font-weight: 600; color: var(--high);">Revisar permissões de usuário direto</h5>
-                                <p style="font-size: 14px; color: var(--text-secondary); margin: 0;">Foram encontradas 94 instâncias de permissões atribuídas diretamente a usuários. Recomendamos substituir por grupos para facilitar a gestão.</p>
+                                <p style="font-size: 14px; color: var(--text-secondary); margin: 0;">Foram encontradas 10 instâncias de permissões atribuídas diretamente a usuários. Recomendamos substituir por grupos para facilitar a gestão.</p>
                             </div>
                         </div>
                         
@@ -1441,7 +1441,7 @@
                             </div>
                             <div>
                                 <h5 style="font-size: 16px; margin-bottom: 5px; font-weight: 600; color: var(--medium);">Reduzir permissões excessivas em grupos</h5>
-                                <p style="font-size: 14px; color: var(--text-secondary); margin: 0;">63 grupos possuem permissões de controle total desnecessárias. Aplique o princípio do menor privilégio.</p>
+                                <p style="font-size: 14px; color: var(--text-secondary); margin: 0;">7 grupos possuem permissões de controle total desnecessárias. Aplique o princípio do menor privilégio.</p>
                             </div>
                         </div>
                         
@@ -1452,7 +1452,7 @@
                             </div>
                             <div>
                                 <h5 style="font-size: 16px; margin-bottom: 5px; font-weight: 600; color: var(--low);">Simplificar estrutura de permissões</h5>
-                                <p style="font-size: 14px; color: var(--text-secondary); margin: 0;">Existem 30 pastas com quebra de herança que podem ser simplificadas para melhorar a gestão e visibilidade.</p>
+                                <p style="font-size: 14px; color: var(--text-secondary); margin: 0;">Existem 3 pastas com quebra de herança que podem ser simplificadas para melhorar a gestão e visibilidade.</p>
                             </div>
                         </div>
                         
@@ -1506,11 +1506,11 @@
                     <label class="filter-label">Pasta</label>
                     <select class="filter-select" id="folderFilter">
                         <option value="">Todas</option>
-                        <option>\\192.168.1.250\dados\Empresa\Finance</option>
-                        <option>\\192.168.1.250\dados\Tree\HR</option>
-                        <option>\\192.168.1.250\dados\Tree\Marketing</option>
-                        <option>\\192.168.1.250\dados\Tree\Projects\2023</option>
-                        <option>\\192.168.1.250\dados\Tree\Projects\2024</option>
+                        <option>\\192.168.1.250\dados\Empresa\Financas</option>
+                        <option>\\192.168.1.250\dados\Empresa\RH</option>
+                        <option>\\192.168.1.250\dados\Empresa\Marketing</option>
+                        <option>\\192.168.1.250\dados\Empresa\Projetos\2023</option>
+                        <option>\\192.168.1.250\dados\Empresa\Projetos\2024</option>
                         <option>\\192.168.1.250\dados\Shared\Public</option>
                         <option>\\192.168.1.250\dados\Shared\Templates</option>
                     </select>
@@ -1782,10 +1782,10 @@
                     Mostrando 1 a 10 de 20 registros
                 </div>
                 <div class="pagination" id="pagination">
-                    <button class="pagination-button disabled"><i class="fas fa-chevron-left"></i></button>
-                    <button class="pagination-button active">1</button>
-                    <button class="pagination-button">2</button>
-                    <button class="pagination-button"><i class="fas fa-chevron-right"></i></button>
+                    <button class="pagination-button disabled" id="prevPage"><i class="fas fa-chevron-left"></i></button>
+                    <button class="pagination-button active" onclick="goToPage(1)">1</button>
+                    <button class="pagination-button" onclick="goToPage(2)">2</button>
+                    <button class="pagination-button" id="nextPage"><i class="fas fa-chevron-right"></i></button>
                 </div>
             </div>
         </div>
@@ -1795,5 +1795,144 @@
             <p><span class="dashboard-title">Security Permissions Dashboard</span> | Gerado em 07/04/2025 | Desenvolvido por Mathews Buzetti</p>
         </div>
     </div>
-</body>
-</html>
+
+    <script>
+        // Dados de problemas para a demonstração
+        const allProblems = [
+            // Página 1 (já exibida na tabela HTML)
+            // Esses 10 já estão no HTML
+            
+            // Página 2 - registros adicionais
+            {
+                severity: "Alta",
+                type: "Usuário direto",
+                folderPath: "\\\\192.168.1.250\\dados\\Empresa\\Projetos\\2022",
+                identity: "DOMAIN\\michael.johnson",
+                permission: "FullControl",
+                recommendation: "Substituir por permissão de grupo",
+                hasFullControl: true
+            },
+            {
+                severity: "Alta",
+                type: "Usuário direto",
+                folderPath: "\\\\192.168.1.250\\dados\\Empresa\\Financas\\Reports",
+                identity: "DOMAIN\\maria.silva",
+                permission: "FullControl",
+                recommendation: "Substituir por permissão de grupo",
+                hasFullControl: true
+            },
+            {
+                severity: "Média",
+                type: "Grupos com permissões de risco",
+                folderPath: "\\\\192.168.1.250\\dados\\Empresa\\IT",
+                identity: "DOMAIN\\G_TechSupport",
+                permission: "FullControl",
+                recommendation: "Reduzir para permissões mínimas necessárias",
+                hasFullControl: true
+            },
+            {
+                severity: "Baixa",
+                type: "Quebra de herança desnecessária",
+                folderPath: "\\\\192.168.1.250\\dados\\Shared\\Templates\\2023",
+                identity: "N/A",
+                permission: "N/A",
+                recommendation: "Restaurar herança de permissões",
+                hasFullControl: false
+            },
+            {
+                severity: "Alta",
+                type: "Usuário direto",
+                folderPath: "\\\\192.168.1.250\\dados\\Empresa\\Projetos",
+                identity: "DOMAIN\\pedro.alves",
+                permission: "Modify",
+                recommendation: "Substituir por permissão de grupo",
+                hasFullControl: false
+            },
+            {
+                severity: "Alta",
+                type: "Usuário direto",
+                folderPath: "\\\\192.168.1.250\\dados\\Empresa\\RH\\Recruitment",
+                identity: "DOMAIN\\julia.costa",
+                permission: "FullControl",
+                recommendation: "Substituir por permissão de grupo",
+                hasFullControl: true
+            },
+            {
+                severity: "Média",
+                type: "Grupos com permissões de risco",
+                folderPath: "\\\\192.168.1.250\\dados\\Empresa\\Marketing\\Campaigns",
+                identity: "DOMAIN\\G_MarketingExt",
+                permission: "FullControl",
+                recommendation: "Reduzir para permissões mínimas necessárias",
+                hasFullControl: true
+            },
+            {
+                severity: "Alta",
+                type: "Usuário direto",
+                folderPath: "\\\\192.168.1.250\\dados\\Empresa\\Legal",
+                identity: "DOMAIN\\carlos.mendes",
+                permission: "FullControl",
+                recommendation: "Substituir por permissão de grupo",
+                hasFullControl: true
+            },
+            {
+                severity: "Média",
+                type: "Grupos com permissões de risco",
+                folderPath: "\\\\192.168.1.250\\dados\\Shared\\Common",
+                identity: "DOMAIN\\G_AllUsers",
+                permission: "FullControl",
+                recommendation: "Reduzir para permissões mínimas necessárias",
+                hasFullControl: true
+            },
+            {
+                severity: "Baixa",
+                type: "Quebra de herança desnecessária",
+                folderPath: "\\\\192.168.1.250\\dados\\Empresa\\IT\\Network",
+                identity: "N/A",
+                permission: "N/A",
+                recommendation: "Restaurar herança de permissões",
+                hasFullControl: false
+            }
+        ];
+        
+        // Variáveis para controle de estado
+        const entriesPerPage = 10;
+        let currentPage = 1;
+        let filteredProblems = [...allProblems];
+        
+        // Funções de paginação
+        function goToPage(page) {
+            if (page < 1 || page > Math.ceil(filteredProblems.length / entriesPerPage)) {
+                return;
+            }
+            
+            currentPage = page;
+            displayPage();
+            updatePaginationButtons();
+        }
+        
+        function displayPage() {
+            // Atualize apenas os botões de página sem recarregar toda a tabela
+            document.querySelectorAll("#pagination button").forEach(button => {
+                if (button.textContent === String(currentPage)) {
+                    button.classList.add("active");
+                } else if (button.id !== "prevPage" && button.id !== "nextPage") {
+                    button.classList.remove("active");
+                }
+            });
+            
+            // Atualizar informações da tabela
+            const startIndex = (currentPage - 1) * entriesPerPage + 1;
+            const endIndex = Math.min(currentPage * entriesPerPage, filteredProblems.length);
+            document.getElementById("tableInfo").textContent = `Mostrando ${startIndex} a ${endIndex} de ${filteredProblems.length} registros`;
+            
+            // Se estamos na página 2, carregue os dados da tabela com os registros adicionais
+            if (currentPage === 2) {
+                loadPage2Data();
+            } else {
+                loadPage1Data();
+            }
+        }
+        
+        function updatePaginationButtons() {
+            const prev
