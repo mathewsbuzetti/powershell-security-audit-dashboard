@@ -4,8 +4,8 @@
 # Versão 1.1 - Com Dashboard HTML Moderno
 
 param (
-    [string]$ServerIP = "192.168.1.250",
-    [array]$NetworkShares = @("\\$ServerIP\dados\RH"),
+    [string]$ServerIP = "10.0.0.15",
+    [array]$NetworkShares = @("\\$ServerIP\dados\RH", "\\$ServerIP\dados\FINANCEIRO"),
     [string]$OutputPath = "C:\temp\SecurityAudit",
     [int]$MaxDepth = 3,
     [int]$BatchSize = 1000,
