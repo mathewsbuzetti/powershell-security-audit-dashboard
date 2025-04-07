@@ -104,7 +104,7 @@ A ferramenta gera um dashboard HTML interativo que facilita a visualização e a
 
 4. Execute o script pressionando F5 ou o botão de Play no PowerShell ISE
 
-5. Alternativamente, você pode executar o script a partir do PowerShell com parâmetros:
+5. Abaixo está um exemplo preenchido com parâmetros comuns:
 
 ```powershell
 .\SecurityAuditDashboard.ps1 -ServerIP "10.0.0.15" `
@@ -122,6 +122,7 @@ A ferramenta gera um dashboard HTML interativo que facilita a visualização e a
 > - **MaxDepth**: Define a profundidade máxima de pastas que serão analisadas. Valores mais altos (como 5) analisam mais subpastas, mas aumentam significativamente o tempo de execução.
 > - **BatchSize**: Define quantas pastas são processadas em cada lote. Valores maiores (2000) usam mais memória, mas podem ser mais rápidos em sistemas com muita RAM. Reduza para 500-1000 em sistemas com memória limitada.
 > - **MaxConcurrentJobs**: Define quantos processamentos paralelos serão executados simultaneamente. Aumentar (4+) pode melhorar a velocidade em CPUs multi-core, mas pode sobrecarregar servidores em produção durante horário comercial.
+> - **SkipFolders**: Lista de diretórios que serão ignorados durante a análise. Use este parâmetro para excluir pastas do sistema ou diretórios que não precisam ser verificados, economizando tempo de processamento e evitando erros com pastas especiais. Os valores padrão (`$`, `System Volume Information`, `Recycle.Bin`) são recomendados para qualquer análise.
 
 ### Resultados
 - O script mostrará o progresso em tempo real no console, com informações detalhadas sobre o processo
