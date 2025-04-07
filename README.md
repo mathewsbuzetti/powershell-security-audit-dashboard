@@ -96,27 +96,15 @@ A ferramenta gera um dashboard HTML interativo que facilita a visualização e a
 3. Localize as linhas abaixo no início do script e altere para o IP do seu servidor e o compartilhamento de rede que deseja analisar:
 
 ```powershell
-# Configurações que você deve alterar:
-[string]$ServerIP = "10.0.0.15"  # Altere para o IP do seu servidor
-[array]$NetworkShares = @("\\$ServerIP\compartilhamento")  # Altere para seu compartilhamento
-[string]$OutputPath = "C:\temp\SecurityAudit"  # Altere para pasta onde salvará relatórios
+param (
+    [string]$ServerIP = "10.0.0.15", # Altere para o IP do seu servidor
+    [array]$NetworkShares = @("\\10.0.0.15\compartilhamento\RH"), # Altere para seu compartilhamento
+    [string]$OutputPath = "C:\temp\SecurityAudit", # Altere para pasta onde salvará relatórios
+    [int]$MaxDepth = 3,
+    [int]$BatchSize = 1000,
+    [int]$MaxConcurrentJobs = 5,
+    [array]$SkipFolders = @("$", "System Volume Information", "Recycle.Bin"),
 ```
-
-4. Execute o script pressionando F5 ou o botão de Play no PowerShell ISE
-
-5. Para maior flexibilidade, você também pode executar o script diretamente no PowerShell com parâmetros específicos. Abaixo está um exemplo preenchido com parâmetros comuns:
-
-```powershell
-.\SecurityAuditDashboard.ps1 -ServerIP "10.0.0.15" `
-                             -NetworkShares @("\\10.0.0.15\compartilhamento\RH", "\\10.0.0.15\compartilhamento\Financeiro") `
-                             -OutputPath "C:\temp\SecurityAudit" `
-                             -MaxDepth 5 `
-                             -BatchSize 2000 `
-                             -MaxConcurrentJobs 4 `
-                             -SkipFolders @("$", "System Volume Information", "Recycle.Bin", "Backups") `
-                             -GenerateHTML
-```
-
 > [!WARNING]\
 > **Parâmetros avançados e seus impactos:**
 > - **MaxDepth**: Define a profundidade máxima de pastas que serão analisadas. Valores mais altos (como 5) analisam mais subpastas, mas aumentam significativamente o tempo de execução.
