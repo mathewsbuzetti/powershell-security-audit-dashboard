@@ -5,7 +5,7 @@
 
 param (
     [string]$ServerIP = "192.168.1.250",
-    [array]$NetworkShares = @("\\$ServerIP\dados\Tree"),
+    [array]$NetworkShares = @("\\$ServerIP\dados\RH"),
     [string]$OutputPath = "C:\temp\SecurityAudit",
     [int]$MaxDepth = 3,
     [int]$BatchSize = 1000,
