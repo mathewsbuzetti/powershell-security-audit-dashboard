@@ -32,11 +32,11 @@ A ferramenta gera um dashboard HTML interativo que facilita a visualização e a
   <em>O demo mostra todas as funcionalidades do dashboard, incluindo métricas, gráficos e tabela de análise interativa</em>
 </p>
 
-![image](https://github.com/user-attachments/assets/dashboard-summary.png)
+![image](https://github.com/user-attachments/assets/c86feab3-850a-4bd1-95d5-7c64717da385)
 
-![image](https://github.com/user-attachments/assets/dashboard-charts.png)
+![image](https://github.com/user-attachments/assets/913fc712-665b-4780-a0d4-a389958fcdcd)
 
-![image](https://github.com/user-attachments/assets/dashboard-table.png)
+![image](https://github.com/user-attachments/assets/52363165-ea22-43f2-9a65-5167f21aa8e0)
 
 ## 📋 Índice
 
