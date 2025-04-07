@@ -1,7 +1,7 @@
 # Script para Análise de Permissões e Geração de Dashboard
 # Autor: Mathews Buzetti
 # GitHub: https://github.com/mathewsbuzetti/powershell-security-audit-dashboard/blob/main/README.md
-# Versão 1.1 - Com Dashboard HTML Moderno
+# Versão 1.1.0 - Com Dashboard HTML Moderno
 
 param (
     [string]$ServerIP = "10.0.0.15",
@@ -76,12 +76,12 @@ Clear-Host
 function Show-Header {
     if ($Compact) {
         Write-Host "┌─────────────────────────────────────────────────────┐" -ForegroundColor White
-        Write-Host "│ SECURITY AUDIT SCANNER v1.1 [INTERACTIVE DASHBOARD] │" -ForegroundColor Green
+        Write-Host "│ SECURITY AUDIT SCANNER v1.1.0 [INTERACTIVE DASHBOARD] │" -ForegroundColor Green
         Write-Host "└─────────────────────────────────────────────────────┘" -ForegroundColor White        
     } else {
         Write-Host "┌─────────────────────────────────────────────────────────┐" -ForegroundColor White
         Write-Host "│              " -NoNewline -ForegroundColor White
-        Write-Host "SECURITY AUDIT SCANNER v1.1 [INTERACTIVE DASHBOARD]" -NoNewline -ForegroundColor Green
+        Write-Host "SECURITY AUDIT SCANNER v1.1.0 [INTERACTIVE DASHBOARD]" -NoNewline -ForegroundColor Green
         Write-Host "        │" -ForegroundColor White
         Write-Host "└─────────────────────────────────────────────────────────┘" -ForegroundColor White
         
