@@ -1,133 +1,185 @@
-# 🔒 Security Audit Dashboard
+# 🔒 Security Audit Dashboard - PowerShell
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Mathews_Buzetti-blue)](https://www.linkedin.com/in/mathewsbuzetti)
 ![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?style=flat-square&logo=powershell&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Production-green?style=flat-square)
 ![Documentation](https://img.shields.io/badge/Documentation-Technical-blue?style=flat-square)
-![Version](https://img.shields.io/badge/Version-1.1-orange?style=flat-square)
 
-**Aplica-se a:** ✔️ Windows Server ✔️ Compartilhamentos de Rede ✔️ Permissões NTFS
+**Aplica-se a:** ✔️ Windows Server 2016/2019/2022 ✔️ Compartilhamentos de Rede ✔️ Permissões NTFS
 
-## 📋 Descrição
+## 📋 Metadados
 
-Uma ferramenta PowerShell avançada para análise de permissões de segurança em compartilhamentos de rede Windows. Gera um dashboard HTML interativo e moderno que permite identificar e corrigir problemas como:
+| Metadado | Descrição |
+|----------|-----------|
+| **Título** | Security Audit Dashboard - Análise de Permissões NTFS |
+| **Versão** | 1.1.0 |
+| **Data** | 07/04/2025 |
+| **Autor** | Mathews Buzetti |
+| **Tags** | `powershell`, `security-audit`, `ntfs-permissions`, `dashboard`, `html-report` |
+| **Status** | ✅ Aprovado para ambiente de produção |
 
-- Permissões atribuídas diretamente a usuários
-- Grupos com permissões excessivas ou desnecessárias
-- Quebras de herança de permissões
-- Análise de conformidade AGDLP
+## 📷 Visualização do Relatório Interativo
 
-O dashboard interativo facilita a análise de permissões, oferecendo recursos de filtragem, busca e visualização gráfica dos problemas encontrados.
+A ferramenta gera um dashboard HTML interativo que facilita a visualização e análise de problemas de permissões em compartilhamentos de rede. O relatório inclui gráficos, estatísticas e uma tabela interativa com recursos de filtragem e busca avançada.
 
-## ✨ Recursos Principais
+<p align="center">
+  <strong>👇 Clique no botão abaixo para visualizar um exemplo de dashboard de análise de segurança 👇</strong>
+  <br><br>
+  <a href="https://mathewsbuzetti.github.io/powershell-security-audit-dashboard/" target="_blank">
+    <img src="https://img.shields.io/badge/Acessar%20Demo-Dashboard:%20Análise%20de%20Segurança-brightgreen?style=for-the-badge&logo=html5" alt="Acessar Demo" width="400">
+  </a>
+  <br>
+  <em>O demo mostra todas as funcionalidades do dashboard, incluindo métricas, gráficos e tabela de análise interativa</em>
+</p>
 
-- 🚀 **Escaneamento Eficiente**: Análise recursiva de permissões em compartilhamentos de rede
-- 📊 **Dashboard Interativo**: Visualização moderna com gráficos e métricas
-- 🧰 **Detecção de Problemas**: Identificação automática de configurações inseguras
-- 🔍 **Filtragem Avançada**: Interface de busca e filtragem para análise detalhada
-- 📈 **Métricas de Risco**: Cálculo de índice de risco baseado em problemas detectados
-- 🔄 **Processamento em Lotes**: Gerenciamento eficiente de memória para grandes ambientes
+![image](https://github.com/user-attachments/assets/dashboard-summary.png)
+
+![image](https://github.com/user-attachments/assets/dashboard-charts.png)
+
+![image](https://github.com/user-attachments/assets/dashboard-table.png)
 
 ## 📋 Índice
 
-1. [Requisitos](#-requisitos)
-2. [Instalação](#-instalação)
-3. [Como Usar](#-como-usar)
-4. [Parâmetros](#-parâmetros)
-5. [Interface do Dashboard](#-interface-do-dashboard)
-6. [Recomendações de Segurança](#-recomendações-de-segurança)
-7. [Problemas Conhecidos](#-problemas-conhecidos)
-8. [Suporte](#-suporte)
-9. [Licença](#-licença)
-10. [Créditos](#-créditos)
+1. [Metadados](#-metadados)
+2. [Visualização do Relatório Interativo](#-visualização-do-relatório-interativo)
+3. [Funcionalidades](#-funcionalidades)
+4. [Pré-requisitos](#-pré-requisitos)
+5. [Como Usar](#-como-usar)
+6. [Parâmetros do Script](#-parâmetros-do-script)
+7. [Tratamento de Erros e Feedback](#-tratamento-de-erros-e-feedback)
+8. [Relatório HTML](#-relatório-html)
+9. [Recomendações de Segurança](#-recomendações-de-segurança)
+10. [Versionamento](#-versionamento)
 
-## 💻 Requisitos
+## 💻 Funcionalidades
 
-- Windows PowerShell 5.1 ou superior
-- Permissões de administrador para ler ACLs nos compartilhamentos
-- Acesso aos compartilhamentos de rede a serem analisados
-- Navegador moderno para visualização do dashboard HTML
+### 📊 Principais Recursos
+* Escaneamento automatizado de permissões NTFS em compartilhamentos de rede
+* Processamento em lotes para otimização de memória e desempenho
+* Detecção inteligente de problemas de segurança e configurações de risco
+* Dashboard HTML interativo com gráficos, estatísticas e tabela de análise
+* Suporte para múltiplos compartilhamentos em uma única execução
+* Cálculo automático de índice de risco de segurança
+* Exportação de dados completos para CSV
 
-## 🚀 Instalação
+### 🔍 Detecção de Problemas de Segurança
+* Permissões atribuídas diretamente a usuários
+* Grupos com permissões excessivas (FullControl)
+* Quebras de herança desnecessárias
+* Violações de conformidade com modelo AGDLP
+* Identificação de contas do sistema com privilégios elevados
 
-1. Clone este repositório:
-   ```powershell
-   git clone https://github.com/mathewsbuzetti/powershell-security-audit-dashboard.git
-   ```
+### 📈 Dashboard HTML Avançado
+* Métricas de resumo com contadores e índice de risco
+* Gráficos de distribuição de problemas por tipo e severidade
+* Top 5 usuários/grupos com mais permissões
+* Tabela completa de problemas com filtros e busca
+* Sistema de classificação de severidade (Alta, Média, Baixa)
+* Seção de recomendações personalizadas
 
-2. Entre na pasta do projeto:
-   ```powershell
-   cd powershell-security-audit-dashboard
-   ```
+## 📋 Pré-requisitos
 
-3. Se necessário, desbloqueie o script:
-   ```powershell
-   Unblock-File -Path .\SecurityAuditDashboard.ps1
-   ```
+* Windows 10/11 ou Windows Server 2016/2019/2022
+* PowerShell 5.1 ou superior
+* Permissões de leitura nos compartilhamentos de rede a serem analisados
+* Navegador moderno para visualizar o dashboard HTML (Chrome, Edge, Firefox)
+* Acesso administrativo para ler permissões NTFS
 
 ## 🚀 Como Usar
 
-1. Execute o script com os parâmetros desejados:
+### 1. Configuração Básica
 
-   ```powershell
-   .\SecurityAuditDashboard.ps1 -ServerIP "192.168.1.250" -NetworkShares "\\192.168.1.250\dados\Tree" -OutputPath "C:\temp\SecurityAudit" -MaxDepth 3
-   ```
+1. Baixe o script:
 
-2. Aguarde o escaneamento ser concluído. O progresso será exibido no terminal.
-
-3. Abra o dashboard HTML gerado no navegador. Por padrão, será aberto automaticamente ao final do processo.
-
-### Exemplo de Uso Completo
+[![Download Script SecurityAuditDashboard.ps1](https://img.shields.io/badge/Download%20Script%20SecurityAuditDashboard-blue?style=flat-square&logo=powershell)](https://github.com/mathewsbuzetti/powershell-security-audit-dashboard/blob/main/Script/SecurityAuditDashboard.ps1)
+   
+2. Execute o script com parâmetros básicos:
 
 ```powershell
-.\SecurityAuditDashboard.ps1 -ServerIP "192.168.1.250" `
-                          -NetworkShares @("\\192.168.1.250\dados\Tree", "\\192.168.1.250\dados\Public") `
-                          -OutputPath "C:\temp\SecurityAudit" `
-                          -MaxDepth 4 `
-                          -BatchSize 1500 `
-                          -MaxConcurrentJobs 3 `
-                          -SkipFolders @("$", "System Volume Information", "Recycle.Bin", "Temp") `
-                          -GenerateHTML
+.\SecurityAuditDashboard.ps1 -ServerIP "10.0.0.15" -NetworkShares "\\10.0.0.15\compartilhamento" -OutputPath "C:\Relatorios\Seguranca"
 ```
 
-## 🔧 Parâmetros
+### 2. Exemplo de Configuração Avançada
 
-| Parâmetro | Tipo | Descrição | Padrão |
-|-----------|------|-----------|--------|
-| ServerIP | string | Endereço IP do servidor que será analisado | "192.168.1.250" |
-| NetworkShares | array | Lista de compartilhamentos a serem analisados | @("\\\\$ServerIP\dados\Tree") |
-| OutputPath | string | Pasta de destino para arquivos de saída | "C:\temp\SecurityAudit" |
-| MaxDepth | int | Profundidade máxima de recursão em subpastas | 3 |
-| BatchSize | int | Número de pastas processadas por lote | 1000 |
-| MaxConcurrentJobs | int | Número máximo de jobs concorrentes | 5 |
-| SkipFolders | array | Pastas a serem ignoradas na análise | @("$", "System Volume Information", "Recycle.Bin") |
-| GenerateHTML | switch | Gerar dashboard HTML interativo | $true |
+Para uma análise mais detalhada, você pode utilizar parâmetros adicionais:
 
-## 📊 Interface do Dashboard
+```powershell
+.\SecurityAuditDashboard.ps1 -ServerIP "10.0.0.15" `
+                             -NetworkShares @("\\10.0.0.15\compartilhamento\RH", "\\10.0.0.15\compartilhamento\Financeiro") `
+                             -OutputPath "C:\Relatorios\Seguranca" `
+                             -MaxDepth 5 `
+                             -BatchSize 2000 `
+                             -MaxConcurrentJobs 4 `
+                             -SkipFolders @("$", "System Volume Information", "Recycle.Bin", "Backups") `
+                             -GenerateHTML
+```
 
-O dashboard HTML gerado fornece uma visualização interativa dos dados de permissões:
+### 3. Resultados
+- O script mostrará o progresso em tempo real no console, com informações detalhadas sobre o processo
+- Ao concluir, um dashboard HTML interativo será gerado na pasta de saída configurada
+- O dashboard será aberto automaticamente no navegador padrão
+- Um arquivo CSV com todos os dados brutos também será gerado para análises adicionais
 
-### 1. Resumo de Métricas
+## 🔧 Parâmetros do Script
 
-- Total de pastas analisadas
-- Total de permissões encontradas
-- Problemas de segurança detectados
-- Índice de risco calculado
+| Parâmetro | Tipo | Descrição | Valor Padrão |
+|-----------|------|-----------|--------------|
+| `ServerIP` | string | Endereço IP do servidor que será analisado | "10.0.0.15" |
+| `NetworkShares` | array | Lista de compartilhamentos a serem analisados | @("\\\\$ServerIP\compartilhamento") |
+| `OutputPath` | string | Pasta de destino para arquivos de saída | "C:\Relatorios\Seguranca" |
+| `MaxDepth` | int | Profundidade máxima de recursão em subpastas | 3 |
+| `BatchSize` | int | Número de pastas processadas por lote | 1000 |
+| `MaxConcurrentJobs` | int | Número máximo de jobs concorrentes | 5 |
+| `SkipFolders` | array | Pastas a serem ignoradas na análise | @("$", "System Volume Information", "Recycle.Bin") |
+| `GenerateHTML` | switch | Gerar dashboard HTML interativo | $true |
+| `Compact` | bool | Modo compacto para console (menos verbose) | $true |
+| `LogLevel` | string | Nível de detalhamento dos logs ("Normal", "Verbose") | "Normal" |
 
-### 2. Visualizações Gráficas
+## ⚠️ Tratamento de Erros e Feedback
 
-- Distribuição de problemas por tipo
-- Top 5 usuários/grupos com mais permissões
-- Análise de severidade (Alta, Média, Baixa)
-- Conformidade com modelo AGDLP
+O script fornece feedback visual em tempo real com cores diferentes:
+- 🟦 **Azul/Ciano**: Informações do processo e progresso
+- 🟩 **Verde**: Operações concluídas com sucesso
+- 🟨 **Amarelo**: Avisos e alertas não críticos
+- 🟥 **Vermelho**: Erros que requerem atenção
 
-### 3. Tabela de Problemas
+Erros comuns que são tratados automaticamente:
+- Pastas inacessíveis ou com permissões insuficientes
+- Arquivos bloqueados ou em uso por outros processos
+- Problemas de rede em compartilhamentos remotos
+- Limites de memória durante o processamento (gerenciados pelo sistema de lotes)
 
-Interface completa com recursos de:
-- Busca em tempo real
-- Filtragem por severidade, tipo, pasta e entidade
-- Paginação de resultados
-- Exportação de dados
+## 📊 Relatório HTML
+
+O dashboard HTML gerado inclui:
+
+1. **Cabeçalho com Informações Gerais**
+   - Servidor e compartilhamentos analisados
+   - Data e hora da análise
+   - Estatísticas gerais (pastas, permissões, problemas)
+
+2. **Resumo de Métricas**
+   - Total de pastas analisadas
+   - Total de permissões encontradas
+   - Problemas de segurança detectados
+   - Índice de risco calculado
+
+3. **Visualizações Gráficas**
+   - Distribuição de problemas por tipo
+   - Top 5 usuários/grupos com mais permissões
+   - Análise de severidade (Alta, Média, Baixa)
+   - Conformidade com modelo AGDLP
+
+4. **Seção de Insights e Recomendações**
+   - Recomendações específicas com base nos problemas encontrados
+   - Priorização por nível de severidade
+   - Sugestões de boas práticas
+
+5. **Tabela Detalhada de Problemas**
+   - Filtros por severidade, tipo, pasta, entidade
+   - Sistema de busca em tempo real
+   - Paginação e controle de registros por página
+   - Badges coloridos para classificação visual
 
 ## 🛡️ Recomendações de Segurança
 
@@ -148,12 +200,11 @@ Para melhorar a segurança de suas permissões, considere as seguintes recomenda
    - Account → Global Group → Domain Local Group → Permission
    - Facilita a gestão e auditoria
 
-## ⚠️ Problemas Conhecidos
+## 🔄 Versionamento
 
-- O escaneamento de permissões pode ser lento em estruturas de pastas muito grandes
-- Alguns caracteres especiais em nomes de pastas podem causar problemas
-- Em ambientes com muitas ACLs, o consumo de memória pode ser elevado
-
-## 👏 Créditos
-
-Desenvolvido por Mathews Buzetti.
+- Versão: 1.1.0
+- Última atualização: 07/04/2025
+- Changelog:
+  - 1.1.0 - Adicionado dashboard HTML interativo
+  - 1.0.1 - Melhorias no sistema de processamento em lotes
+  - 1.0.0 - Versão inicial
