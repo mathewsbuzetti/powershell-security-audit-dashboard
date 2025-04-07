@@ -104,7 +104,7 @@ A ferramenta gera um dashboard HTML interativo que facilita a visualização e a
 
 4. Execute o script pressionando F5 ou o botão de Play no PowerShell ISE
 
-5. Abaixo está um exemplo preenchido com parâmetros comuns:
+5. Para maior flexibilidade, você também pode executar o script diretamente no PowerShell com parâmetros específicos. Abaixo está um exemplo preenchido com parâmetros comuns:
 
 ```powershell
 .\SecurityAuditDashboard.ps1 -ServerIP "10.0.0.15" `
