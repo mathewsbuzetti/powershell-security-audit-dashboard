@@ -112,9 +112,15 @@ param (
 > - **MaxConcurrentJobs**: Define quantos processamentos paralelos serão executados simultaneamente. Aumentar (4+) pode melhorar a velocidade em CPUs multi-core, mas pode sobrecarregar servidores em produção durante horário comercial.
 > - **SkipFolders**: Lista de diretórios que serão ignorados durante a análise. Use este parâmetro para excluir pastas do sistema ou diretórios que não precisam ser verificados, economizando tempo de processamento e evitando erros com pastas especiais. Os valores padrão (`$`, `System Volume Information`, `Recycle.Bin`) são recomendados para qualquer análise.
 
+4. Execute o script pressionando F5 ou o botão de Play no PowerShell ISE
+
+5. Aguarde o escaneamento ser concluído. O progresso será exibido no terminal.
+
+6. Abra o dashboard HTML gerado no navegador. Por padrão, será aberto automaticamente ao final do processo.
+
 ### Resultados
 - O script mostrará o progresso em tempo real no console, com informações detalhadas sobre o processo
-- Ao concluir, um dashboard HTML interativo será gerado na pasta de saída configurada
+- Ao concluir, um dashboard HTML interativo será gerado na pasta de saída configurada "C:\temp\SecurityAudit"
 - O dashboard será aberto automaticamente no navegador padrão
 - Um arquivo CSV com todos os dados brutos também será gerado para análises adicionais
 
