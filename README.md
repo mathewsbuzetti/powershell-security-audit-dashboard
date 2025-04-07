@@ -99,7 +99,7 @@ A ferramenta gera um dashboard HTML interativo que facilita a visualização e a
 param (
     [string]$ServerIP = "10.0.0.15", # Altere para o IP do seu servidor
     [array]$NetworkShares = @("\\10.0.0.15\compartilhamento\RH"), # Altere para seu compartilhamento
-    [string]$OutputPath = "C:\temp\SecurityAudit", # Altere para pasta onde salvará relatórios
+    [string]$OutputPath = "C:\temp\SecurityAudit", 
     [int]$MaxDepth = 3,
     [int]$BatchSize = 1000,
     [int]$MaxConcurrentJobs = 5,
