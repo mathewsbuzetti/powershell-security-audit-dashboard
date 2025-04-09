@@ -81,7 +81,7 @@ A ferramenta gera um dashboard HTML interativo que facilita a visualização e a
 
 * Windows 10/11 ou Windows Server 2016/2019/2022
 * PowerShell 5.1 ou superior
-* Permissões de leitura nos compartilhamentos de rede a serem analisados
+* Permissões de administrador nos compartilhamentos de rede a serem analisados
 * Navegador moderno para visualizar o dashboard HTML (Chrome, Edge, Firefox)
 * Acesso administrativo para ler permissões NTFS
 
